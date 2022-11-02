@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: microservice
+  cloud:
+    config:
+      uri: http://localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+microservice:
+  minimum: 1
+  maximum: 999
+
