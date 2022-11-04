@@ -1,11 +1,7 @@
 package ru.vdcom.paymentmodule.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.vdcom.paymentmodule.entity.Payment;
 import ru.vdcom.paymentmodule.service.PaymentService;
 
@@ -19,5 +15,10 @@ public class PaymentController {
     @PostMapping("/doPayment")
     public Payment savePayment(@RequestBody Payment payment) {
         return paymentService.saveOrder(payment);
+    }
+
+    @GetMapping("/{orderId}")
+    public Payment findPaymentByOrderId(@PathVariable("orderId") Integer orderId) {
+        return paymentService.findPaymentByOrderId(orderId);
     }
 }

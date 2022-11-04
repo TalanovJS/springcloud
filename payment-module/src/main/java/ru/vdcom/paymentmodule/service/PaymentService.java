@@ -23,4 +23,8 @@ public class PaymentService {
     public String getRandom() {
         return new Random().nextBoolean() ? "success" : "decline";
     }
+
+    public Payment findPaymentByOrderId(Integer orderId) {
+        return paymentRepository.findByOrderId(orderId);
+    }
 }

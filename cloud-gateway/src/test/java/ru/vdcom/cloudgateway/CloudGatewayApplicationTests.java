@@ -1,10 +1,10 @@
-package ru.vdcom.configserver;
+package ru.vdcom.cloudgateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest()
-class ConfigServerApplicationTests {
+@SpringBootTest(classes = CloudGatewayApplicationTests.class)
+class CloudGatewayApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,10 +1,10 @@
-package ru.vdcom.configserver;
+package ru.vdcom.hystrixdashboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest()
-class ConfigServerApplicationTests {
+@SpringBootTest
+class HystrixDashboardApplicationTests {
 
     @Test
     void contextLoads() {

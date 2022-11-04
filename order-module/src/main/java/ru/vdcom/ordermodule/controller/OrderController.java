@@ -11,13 +11,13 @@ import ru.vdcom.ordermodule.common.TransactionResponse;
 import ru.vdcom.ordermodule.service.OrderService;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/order")
+@RequiredArgsConstructor
 public class OrderController {
 
     private final OrderService orderService;
 
-    @PostMapping
+    @PostMapping("/doOrder")
     public TransactionResponse saveOrder(@RequestBody TransactionRequest request) throws JsonProcessingException {
         return orderService.saveOrder(request);
     }
