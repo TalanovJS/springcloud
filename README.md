@@ -1,10 +1,12 @@
 # spring-cloud
 
+config-server: https://github.com/TalanovJS/cloud-config-server/blob/main/application.yml
+
 
 API-GateWay
 -----------
 ```bash
-URL : http://localhost:8989/order/bookOrder
+URL : http://localhost:8989/order/doOrder
 HTTP Method : POST
 ```
 Json Request :
