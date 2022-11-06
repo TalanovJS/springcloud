@@ -1,7 +1,7 @@
 # spring-cloud
 
 config-server: https://github.com/TalanovJS/cloud-config-server/blob/main/application.yml
-zipkin: docker run -d -p 9411:9411 openzipkin/zipkin
+```zipkin: docker run -d -p 9411:9411 openzipkin/zipkin
 
 
 API-GateWay
