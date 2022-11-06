@@ -23,7 +23,6 @@ spring:
                 name: payment-service
                 fallbackuri: forward:/paymentFallback
 
-
 server:
   port: 8989
 
@@ -31,7 +30,24 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: hystrix.stream, health
+  endpoint:
+    health:
+      show-details: never
+
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      userService:
+#        registerHealthIndicator: true
+#        eventConsumerBufferSize: 10
+#        failureRateThreshold: 50
+#        minimumNumberOfCalls: 5
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 5s
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        slidingWindowSize: 10
+#        slidingWindowType: COUNT_BASED
 
 hystrix:
   command:

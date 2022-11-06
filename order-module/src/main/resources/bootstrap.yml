@@ -5,3 +5,4 @@ spring:
         - http://localhost:8888
       enabled: true
       label: main
+      fail-fast: true
